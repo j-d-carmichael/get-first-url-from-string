@@ -28,7 +28,7 @@
     "TypeScript"
   ],
   "dependencies": {
-    "tslib": "^1.11.1"
+    "get-urls": "^9.2.0"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
