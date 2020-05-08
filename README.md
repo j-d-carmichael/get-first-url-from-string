@@ -1,23 +1,5 @@
-# typescript-npm-package-tpl
+# get-first-url-from-string
 
-Use this package to create a typescript based package for npm.
+Import it, pass it a string of text. Will return false for no URL found or the 1st URL found.
 
-Ensure you update:
-- package.json
-- .github/ISSUE_TEMPLATE files
-- githooks to your style
-- CODE_OF_CONDUCT
-- CONTRIBUTING
-- LICENCE
-- This readme file :)
-- Any anything else.
-
-## ttypescript:
-This uses ttypescript which allows use of the ts-transform-paths plugin found in the tsconfig.
-This basically transforms the output of any shortcuts (eg `@/myfile.ts`) to the full relative paths, without this the shortcuts break as node cannot resolve them.
-
-## CI + Coverage
-This is ready to go with travis and codecov, though you will need to create an account on both of these services and point them to the correct repos, but the travis.yml is about all you should need and the codecov as seen in the package.json file.
-
-## Missed anything?
-Create a pull request and get your input merged in, thanks.
+The default import is the typescript verion, please import build/index.js if you don't use ts.

@@ -1,9 +1,9 @@
 import getFirstUrlFromString from '../index';
 test('should return empty string for empty string passed', function () {
-    expect(getFirstUrlFromString('')).toBe('');
+    expect(getFirstUrlFromString('')).toBe(false);
 });
 test('should return empty string for string passed without url', function () {
-    expect(getFirstUrlFromString('hello world this is me')).toBe('');
+    expect(getFirstUrlFromString('hello world this is me')).toBe(false);
 });
 test('should return string with google', function () {
     expect(getFirstUrlFromString('hello https://www.google.com world')).toBe('https://www.google.com');

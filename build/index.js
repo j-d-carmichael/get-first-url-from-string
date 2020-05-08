@@ -19,5 +19,5 @@ export default (function (text, options) {
         stripHash: options.stripHash || false,
         stripProtocol: options.stripProtocol || false,
         stripWWW: options.stripWWW || false,
-    })).values().next().value || '';
+    })).values().next().value || false;
 });
