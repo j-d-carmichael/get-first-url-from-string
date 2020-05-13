@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "es2015",
-    "moduleResolution": "node",
+    "module": "commonjs",
     "esModuleInterop": true,
-    "noImplicitAny": true,
-    "sourceMap": false,
+    "target": "ES2017",
+    "moduleResolution": "node",
     "outDir": "build",
-    "baseUrl": ".",
+    "baseUrl": "./",
+    "sourceMap": true,
     "resolveJsonModule": true,
-    "importHelpers": true
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "exclude": [
     "package.json",

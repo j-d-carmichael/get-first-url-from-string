@@ -1,4 +1,9 @@
-import getUrls from 'get-urls';
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const get_urls_1 = __importDefault(require("get-urls"));
 /**
  * Returns the 1st url found in a string.
  *   - Subsequent urls are ignored
@@ -9,9 +14,8 @@ import getUrls from 'get-urls';
  * @param options
  * @return {string}
  */
-export default (function (text, options) {
-    if (options === void 0) { options = {}; }
-    return (getUrls(text, {
+exports.default = (text, options = {}) => {
+    return (get_urls_1.default(text, {
         forceHttps: options.forceHttps || true,
         removeTrailingSlash: options.removeTrailingSlash || true,
         sortQueryParameters: options.sortQueryParameters || true,
@@ -20,4 +24,5 @@ export default (function (text, options) {
         stripProtocol: options.stripProtocol || false,
         stripWWW: options.stripWWW || false,
     })).values().next().value || false;
-});
+};
+//# sourceMappingURL=index.js.map
