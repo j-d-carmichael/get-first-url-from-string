@@ -13,6 +13,6 @@
   },
   "exclude": [
     "package.json",
-    "__tests__/**"
+    "src/__tests__/**"
   ]
 }
