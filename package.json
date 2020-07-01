@@ -1,9 +1,10 @@
 {
   "name": "get-first-url-from-string",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Return the 1st url in a given input text",
   "licence": "MIT",
-  "main": "./build/index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
     "install:githooks": "cp ./githooks/* .git/hooks",
     "test": "npm run lint && npm run test:unit",
