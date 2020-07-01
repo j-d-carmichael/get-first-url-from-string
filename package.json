@@ -1,6 +1,6 @@
 {
   "name": "get-first-url-from-string",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Return the 1st url in a given input text",
   "licence": "MIT",
   "main": "build/index.js",
@@ -26,7 +26,7 @@
     "url"
   ],
   "dependencies": {
-    "get-urls": "^9.2.0"
+    "get-urls": "^9.2.1"
   },
   "devDependencies": {
     "@types/jest": "^25.2.1",
