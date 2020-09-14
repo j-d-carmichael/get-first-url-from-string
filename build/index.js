@@ -11,18 +11,18 @@ const get_urls_1 = __importDefault(require("get-urls"));
  *   - All query params and hash params remain intact
  *   - All query params are sorted
  * @param {string} text - The input string to find URLs
- * @param options
+ * @param {getUrls.Options} options - Options to control getUrls
  * @return {string}
  */
 exports.default = (text, options = {}) => {
-    return (get_urls_1.default(text, {
-        forceHttps: options.forceHttps || true,
-        removeTrailingSlash: options.removeTrailingSlash || true,
-        sortQueryParameters: options.sortQueryParameters || true,
-        stripAuthentication: options.stripAuthentication || true,
-        stripHash: options.stripHash || false,
-        stripProtocol: options.stripProtocol || false,
-        stripWWW: options.stripWWW || false,
-    })).values().next().value || false;
+    return (get_urls_1.default(text, Object.assign({
+        forceHttps: true,
+        removeTrailingSlash: true,
+        sortQueryParameters: false,
+        stripAuthentication: true,
+        stripHash: false,
+        stripProtocol: false,
+        stripWWW: false,
+    }, options))).values().next().value || false;
 };
 //# sourceMappingURL=index.js.map

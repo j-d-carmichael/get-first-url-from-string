@@ -1,6 +1,6 @@
 {
   "name": "get-first-url-from-string",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "Return the 1st url in a given input text",
   "licence": "MIT",
   "main": "build/index.js",
@@ -29,13 +29,13 @@
     "get-urls": "^9.2.1"
   },
   "devDependencies": {
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.11.1",
-    "codecov": "^3.6.5",
-    "eslint": "^6.8.0",
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.10.1",
+    "codecov": "^3.7.2",
+    "eslint": "^7.9.0",
     "hasha": "^5.2.0",
-    "jest": "^25.3.0",
-    "ts-jest": "^25.3.1",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
     "tslint": "^6.1.1",
     "typescript": "^3.8.3"
   }

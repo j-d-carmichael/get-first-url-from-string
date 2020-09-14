@@ -7,17 +7,17 @@ import getUrls from 'get-urls';
  *   - All query params and hash params remain intact
  *   - All query params are sorted
  * @param {string} text - The input string to find URLs
- * @param options
+ * @param {getUrls.Options} options - Options to control getUrls
  * @return {string}
  */
-export default (text: string, options: getUrls.Options = {}) => {
-  return (getUrls(text, {
-    forceHttps: options.forceHttps || true,
-    removeTrailingSlash: options.removeTrailingSlash || true,
-    sortQueryParameters: options.sortQueryParameters || true,
-    stripAuthentication: options.stripAuthentication || true,
-    stripHash: options.stripHash || false,
-    stripProtocol: options.stripProtocol || false,
-    stripWWW: options.stripWWW || false,
-  })).values().next().value || false;
+export default (text: string, options: getUrls.Options = {}): string | boolean => {
+  return (getUrls(text, Object.assign({
+    forceHttps: true,
+    removeTrailingSlash: true,
+    sortQueryParameters: false,
+    stripAuthentication: true,
+    stripHash: false,
+    stripProtocol: false,
+    stripWWW: false,
+  }, options))).values().next().value || false;
 };
