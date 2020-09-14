@@ -10,7 +10,7 @@ import getUrls from 'get-urls';
  * @param {getUrls.Options} options - Options to control getUrls
  * @return {string}
  */
-export default (text: string, options: getUrls.Options = {}): string | boolean => {
+export default (text: string, options: getUrls.Options = {}) => {
   return (getUrls(text, Object.assign({
     forceHttps: true,
     removeTrailingSlash: true,
