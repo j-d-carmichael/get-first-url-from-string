@@ -8,6 +8,10 @@ test('should return empty string for string passed without url', () => {
   expect(getFirstUrlFromString('hello world this is me')).toBe('');
 });
 
+test('should return string where the path is complex ending in a slash ', () => {
+  expect(getFirstUrlFromString('https://www.blue-tomato.com/en-DE/product/Season-Nexus+155+Snowboard-639580/ it needs to also grab the slash at the end')).toBe('https://www.blue-tomato.com/en-DE/product/Season-Nexus+155+Snowboard-639580/');
+});
+
 test('should return string with google', () => {
   expect(getFirstUrlFromString('hello https://www.google.com world')).toBe('https://www.google.com');
 });
