@@ -1,28 +1,13 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+'use strict';
 Object.defineProperty(exports, "__esModule", { value: true });
-const get_urls_1 = __importDefault(require("get-urls"));
-/**
- * Returns the 1st url found in a string.
- *   - Subsequent urls are ignored
- *   - All urls forced to https
- *   - All query params and hash params remain intact
- *   - All query params are sorted
- * @param {string} text - The input string to find URLs
- * @param {getUrls.Options} options - Options to control getUrls
- * @return {string}
- */
-exports.default = (text, options = {}) => {
-    return (get_urls_1.default(text, Object.assign({
-        forceHttps: true,
-        removeTrailingSlash: true,
-        sortQueryParameters: false,
-        stripAuthentication: true,
-        stripHash: false,
-        stripProtocol: false,
-        stripWWW: false,
-    }, options))).values().next().value || false;
+exports.default = (input) => {
+    const regex = /((?<SCHEME>(?:https))(?<HOSTNAME>\:\/\/(?:www.|[a-zA-ZÀ-ž.]+)[a-zA-ZÀ-ž0-9\-\.]+\.(?:[\w]{1,}))?(?<PORT>\:[0-9][0-9]{0,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])?(?<PATH>[a-zA-ZÀ-ž0-9\-\.\/]+)?(?<QUERY>(?:\?$|[a-zA-ZÀ-ž0-9\.\,\;\?\'\\\+&%\$\=~_\-\*]+))?(?<HASH>(?:#[a-zA-ZÀ-ž0-9\.\,\;\?\'\\\+&%\$\=~_\-\*]+))?)/gim;
+    const out = regex.exec(input);
+    if (out) {
+        return out[0];
+    }
+    else {
+        return '';
+    }
 };
 //# sourceMappingURL=index.js.map

@@ -1,18 +1,9 @@
 # get-first-url-from-string
 
-Import it, pass it a string of text. Will return **false** for no URL found, or the 1st URL found.
+Import the function, pass in a string.
 
-The default import is the typescript version, please import build/index.js if you don't use ts.
+The response will always be a string, either containing the 1st HTTPS URL it found or just an empty string.
 
-Default values:
-```javascript
-{
-    forceHttps: true,
-    removeTrailingSlash: true,
-    sortQueryParameters: true,
-    stripAuthentication: true,
-    stripHash: false,
-    stripProtocol: false,
-    stripWWW: false,
-}
-```
+No dependencies, see an improvement on the regex pattern, PRs are welcomed :)
+
+For examples, please see the unit tests.
