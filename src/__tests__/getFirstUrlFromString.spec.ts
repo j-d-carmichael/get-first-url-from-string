@@ -41,6 +41,7 @@ test('should return a long complex urls', () => {
     'https://www.amazon.de/-/en/Throw-Burrito-Exploding-Kittens-Dodgeball/dp/B07TS96J7Q/?_encoding=UTF8&pd_rd_w=U1Chq&pf_rd_p=e1c506bc-20f2-4103-883d-bfc914d48327&pf_rd_r=JHCKJP8X0NS835A7XT10&pd_rd_r=807eab37-eb12-4994-8a67-4ea9ä82dbde00&pd_rd_wg=MYTRk&ref_=pd_gw_unk',
     'https://shop.shop.com/some/shoes#/something/page',
     'https://shop.shop.com/some/shoes?/something/page#1=/hello-world!%$',
+    'https://shop.shop.com/some/shoes?/something_with_underscores/page#1=/hello-world!%$',
   ];
   urls.forEach((url: string) => {
     expect(getFirstUrlFromString(` sergdgf  ${url} sdliushvlsdiuh lsdn`)).toBe(url);

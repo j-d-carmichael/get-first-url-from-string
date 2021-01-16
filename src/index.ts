@@ -4,7 +4,7 @@ export default (input: string): string => {
   const scheme = '(?:https)';
   const hostname = '(\\:\\/\\/(?:www.|[a-zA-ZÀ-ž.]+)[a-zA-ZÀ-ž0-9\\-\\.]+\\.(?:[\\w]{1,}))?';
   const port = '(\:[0-9][0-9]{0,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])?';
-  const path = '([a-zA-ZÀ-ž0-9\\-\\.\\/\\+]+)?';
+  const path = '([a-zA-ZÀ-ž0-9\\-_\\.\\/\\+]+)?';
   const query = '(?:\\?$|[^\\s"]*)?';
   const hash = '(?:#[^\\s"]*)?';
 
@@ -12,7 +12,7 @@ export default (input: string): string => {
   // const scheme = '(?<SCHEME>(?:https))';
   // const hostname = '(?<HOSTNAME>\\:\\/\\/(?:www.|[a-zA-ZÀ-ž.]+)[a-zA-ZÀ-ž0-9\\-\\.]+\\.(?:[\\w]{1,}))?';
   // const port = '(?<PORT>\:[0-9][0-9]{0,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])?'
-  // const path = '(?<PATH>[a-zA-ZÀ-ž0-9\\-\\.\\/\\+]+)?';
+  // const path = '(?<PATH>[a-zA-ZÀ-ž0-9\\-_\\.\\/\\+]+)?';
   // const query = '(?<QUERY>(?:\\?$|[^\\s"]*)?)?';
   // const hash = '(?<HASH>(?:#[^\\s"]*)?)?';
 
