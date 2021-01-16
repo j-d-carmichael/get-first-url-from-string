@@ -1,6 +1,6 @@
 {
   "name": "get-first-url-from-string",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Return the 1st url in a given input text",
   "licence": "MIT",
   "main": "build/index.js",
